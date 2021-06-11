@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-header: "Big Shoulders Display", cursive;
+  --ff-main: "Lexend Deca", sans-serif;
+
+  --clr-orange: hsl(31, 77%, 52%);
+  --clr-darkcyan: hsl(184, 100%, 22%);
+  --clr-verydarkcyan: hsl(179, 100%, 13%);
+  --clr-paragraph: hsla(0, 0%, 100%, 0.75);
+  --clr-headings: hsl(0, 0%, 95%);
+}
+
+body {
+  font-size: 15px;
+  font-family: var(--ff-main);
+  line-height: 1.6;
+  color: var(--clr-paragraph);
+  background-color: var(--clr-headings);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: var(--ff-header);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: var(--clr-headings);
+  margin-bottom: 1.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  width: 57.5rem;
+  height: 31.25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 60rem) {
+  section {
+    width: 20.5rem;
+    height: auto;
+    flex-direction: column;
+  }
+}
+
+.description {
+  margin-bottom: 2rem;
+}
+
+button {
+  height: 3rem;
+  width: 9rem;
+  background: var(--clr-headings);
+  border-radius: 2rem;
+  border: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: transparent;
+  color: var(--clr-headings) !important;
+  border: 2px var(--clr-headings) solid;
+}
+
+img {
+  margin-bottom: 1.5rem;
+}
+
+.sedan,
+.suv,
+.luxury {
+  padding: 3rem;
+  height: 100%;
+}
+
+.sedan {
+  background-color: var(--clr-orange);
+}
+
+.sedan button {
+  color: var(--clr-orange);
+}
+
+.suv {
+  background-color: var(--clr-darkcyan);
+}
+
+.suv button {
+  color: var(--clr-darkcyan);
+}
+
+.luxury {
+  background-color: var(--clr-verydarkcyan);
+}
+
+.luxury button {
+  color: var(--clr-verydarkcyan);
+}
