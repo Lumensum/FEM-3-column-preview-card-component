@@ -39,6 +39,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: 100vh;
 }
 
 h1 {
@@ -46,7 +47,6 @@ h1 {
   text-transform: uppercase;
   font-size: 2.5rem;
   color: var(--clr-headings);
-  margin-bottom: 1.5rem;
 }
 
 main {
@@ -63,19 +63,14 @@ main {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 60rem) {
-  main {
-    width: 20.5rem;
-    height: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .description {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 button {
@@ -96,11 +91,13 @@ button:hover {
 }
 
 button:focus {
-  border: 2px var(--clr-headings) dotted;
+  background-color: var(--clr-paragraph);
 }
 
 img {
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
+  height: 2.5rem;
+  width: 4rem;
 }
 
 .sedan,
@@ -132,4 +129,24 @@ img {
 
 .luxury button {
   color: var(--clr-verydarkcyan);
+}
+
+@media only screen and (max-width: 60rem) {
+  body {
+    height: 100%;
+  }
+
+  main {
+    margin: 1rem;
+    width: 20.5rem;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .description {
+    margin-bottom: 2rem;
+  }
 }
